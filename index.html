@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>示例网站 — 单页模板</title>
+  <title>裕鸿助手 — 官方下载与说明</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
@@ -62,9 +62,9 @@
         </div>
       </div>
       <nav>
-        <a href="index.html">首页</a>
-        <a href="about.html">关于我们</a>
-        <a href="#features">功能</a>
+        <a href="#guide">使用说明</a>
+        <a href="#download">下载说明</a>
+        <a href="#faq">常见问题</a>
         <a href="#contact">联系我们</a>
       </nav>
     </header>
@@ -72,15 +72,15 @@
     <main>
       <section class="hero">
         <div class="left">
-          <h1>单页演示 — 立刻可用</h1>
-          <p>这是一个可直接使用的HTML单页网站模板。替换文字、图片与链接即可上线。</p>
+          <h1>裕鸿助手 — 官方下载与说明</h1>
+          <p>这是裕鸿助手的官方介绍页。查看使用说明、下载程序并获取常见问题解答。</p>
           <div class="cta">
-            <button class="btn" onclick="scrollToSection('contact')">联系我们</button>
-            <button class="btn ghost" onclick="downloadHTML()">下载 HTML</button>
+            <button class="btn" onclick="scrollToSection('download')">立即下载</button>
+            <button class="btn ghost" onclick="scrollToSection('guide')">使用说明</button>
           </div>
           <div class="divider"></div>
           <div class="card small" style="margin-top:12px">
-            <div><strong>部署建议：</strong> 直接把此文件命名为 <code>index.html</code> 并上传到任意静态主机。</div>
+            <div><strong>提示：</strong> 需要更多功能（如在线支付/授权校验）可后续接入后端。</div>
           </div>
         </div>
         <aside>
@@ -103,21 +103,51 @@
         </aside>
       </section>
 
-      <section id="features">
-        <h2 style="margin-top:44px">功能速览</h2>
-        <div class="features">
-          <div class="feature">
-            <h3>响应式布局</h3>
-            <p>自动适配桌面与移动设备。</p>
+      <section id="guide">
+        <h2 style="margin-top:44px">程序使用说明</h2>
+        <div class="card" style="margin-top:12px">
+          <ol style="margin:0 0 0 18px">
+            <li>从下方“下载说明”获取最新版安装包并保存到电脑。</li>
+            <li>双击安装包并按提示完成安装；如被拦截，选择“仍要运行”。</li>
+            <li>启动“裕鸿助手”，用手机号注册/登录，完成初始化设置。</li>
+            <li>常用操作：在首页选择功能 → 按步骤执行；问题可查看“常见问题”。</li>
+          </ol>
+          <p class="small" style="margin-top:12px">提示：首次使用建议先在设置里开启自动更新与日志上报。</p>
+        </div>
+      </section>
+
+      <section id="download" style="margin-top:36px">
+        <h2>下载说明</h2>
+        <div class="card" style="margin-top:12px">
+          <p class="small">请将下方链接替换为你的真实下载地址。</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn" href="#" id="downloadBtn">立即下载（Windows）</a>
+            <button class="btn ghost" type="button" onclick="scrollToSection('guide')">查看使用说明</button>
           </div>
-          <div class="feature">
-            <h3>易于部署</h3>
-            <p>单文件 HTML，支持 GitHub Pages、Vercel 等。</p>
+          <div class="divider"></div>
+          <div class="small">
+            <div><strong>系统要求：</strong> Windows 10/11 64位，联网环境。</div>
+            <div><strong>版本：</strong> v1.0.0（示例）。</div>
+            <div><strong>校验：</strong> SHA256：请替换为真实签名。</div>
           </div>
-          <div class="feature">
-            <h3>可扩展</h3>
-            <p>可以加入更多页面，或接入后端 API。</p>
-          </div>
+        </div>
+      </section>
+
+      <section id="faq" style="margin-top:36px">
+        <h2>常见问题</h2>
+        <div class="card" style="margin-top:12px">
+          <details>
+            <summary>安装被防护软件拦截怎么办？</summary>
+            <p class="small">请选择“仍要运行/信任此应用”，或将安装包加入白名单。</p>
+          </details>
+          <details>
+            <summary>启动后提示缺少运行库？</summary>
+            <p class="small">在“下载说明”中安装运行库或通过系统更新安装 .NET/VC 运行库后重试。</p>
+          </details>
+          <details>
+            <summary>如何联系客服？</summary>
+            <p class="small">前往页面底部“联系方式”提交表单或通过邮箱与我们联系。</p>
+          </details>
         </div>
       </section>
 
