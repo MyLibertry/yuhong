@@ -38,11 +38,22 @@
       <div class="divider" style="height:1px;background:rgba(255,255,255,0.06);margin:12px 0"></div>
       <div style="display:grid;gap:8px">
         <div class="card" style="background:rgba(14,165,164,0.12)">
-          <strong>客服微信</strong>：请添加微信号 <code>请填写你的微信号</code>（工作时间 9:00-22:00）。添加后备注“获取下载链接”，并说明设备系统（如 Windows 10/11）。
+          <strong>客服微信</strong>：请添加微信号 
+          <span id="wxId" style="display:inline-block;font-size:20px;font-weight:800;color:#ffffff;background:rgba(239,68,68,0.25);padding:4px 10px;border-radius:8px;cursor:pointer;user-select:all" onclick="copyWx()">LibertyLjx</span>
+          <span id="copyTip" class="small" style="margin-left:8px;color:#94a3b8">点击复制</span>
+          （工作时间 9:00-22:00）。添加后备注“获取下载链接”，并说明设备系统（如 Windows 10/11）。
         </div>
         <div class="small" style="color:#94a3b8">提示：如若微信无法添加，可通过邮箱或备用联系方式与我们取得联系，我们将尽快回复并提供安全的下载方式。</div>
       </div>
     </div>
+    <script>
+      function copyWx(){
+        const wx = 'LibertyLjx';
+        try{ navigator.clipboard && navigator.clipboard.writeText(wx); }catch(e){}
+        var tip = document.getElementById('copyTip');
+        if(tip){ tip.textContent = '已复制'; setTimeout(function(){ tip.textContent = '点击复制'; }, 2000); }
+      }
+    </script>
   </div>
 </body>
 </html>
