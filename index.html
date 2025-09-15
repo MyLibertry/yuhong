@@ -34,17 +34,13 @@
     nav a:first-child{margin-left:0}
     nav a:hover{color:#fff}
     .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:start;margin-top:12px}
-    .hero .left{ text-align:center }
     .hero .left h1{font-size:34px;margin:0 0 12px}
     .hero .left p{color:var(--muted);margin:0 0 18px}
     .cta{display:flex;gap:12px}
-    .hero .left .cta{justify-content:center}
     .btn{padding:12px 18px;border-radius:10px;background:var(--accent);color:#002;font-weight:700;border:none;cursor:pointer}
     .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
     .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 30px rgba(2,6,23,0.6);}
     .small{font-size:13px;color:var(--muted)}
-    .card.center{ text-align:center }
-    .card.center ol{ list-style-position:inside; padding-left:0; }
     .highlight{background:linear-gradient(180deg, rgba(14,165,164,0.14), rgba(255,255,255,0.03));border:1px solid rgba(14,165,164,0.35)}
     .badge{display:inline-block;padding:2px 8px;border-radius:999px;background:var(--accent);color:#002;font-weight:700;font-size:12px;margin-right:8px}
     .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:34px 0}
@@ -98,11 +94,24 @@
           <div class="card small" style="margin-top:12px">
             <div><strong>提示：</strong> 需要更多功能（如在线支付/授权校验）可后续接入后端。</div>
           </div>
+          <div class="card" style="margin-top:12px">
+            <h3 style="margin:0 0 8px">体育彩票注意事项</h3>
+            <ul class="small" style="margin:0 0 0 18px">
+              <li><strong>合法参与：</strong>仅限年满18周岁的成年人参与，未成年人禁止购买彩票。</li>
+              <li><strong>理性购彩：</strong>量力而行，设置预算，切勿借贷、透支或将购彩作为收入来源。</li>
+              <li><strong>官方渠道：</strong>请通过国家体育彩票官网、官方客户端或授权网点购票，拒绝私盘与非法网站。</li>
+              <li><strong>风险提示：</strong>彩票具备偶然性，无“必中”“内幕数据”，谨防以荐号、稳赚为名的诈骗。</li>
+              <li><strong>信息核验：</strong>以官方公布的开奖信息为准，兑奖请在规定期限内携带有效凭证办理。</li>
+              <li><strong>账号与隐私：</strong>妥善保管账号、验证码与票面信息，不随意向他人泄露。</li>
+              <li><strong>遵守法规：</strong>自觉遵守所在地法律法规与平台规则，文明理性参与公益彩票。</li>
+            </ul>
+            <p class="small" style="margin-top:8px;color:#94a3b8">温馨提示：彩票公益，重在参与。本站仅提供信息展示与工具服务，不提供任何非法赌博活动。</p>
+          </div>
         </div>
         <aside>
-          <div class="card highlight center" style="margin-top:12px">
+          <div class="card highlight" style="margin-top:12px">
             <div class="badge">重要</div><strong>服务流程说明</strong>
-            <ol style="margin:8px 0 0 0">
+            <ol style="margin:8px 0 0 18px">
               <li>用户准备：下载安装、注册登录并完成基础设置。</li>
               <li>选择服务：在应用内选择功能，确认参数与费用。</li>
               <li>提交下单：系统校验信息并生成订单。</li>
