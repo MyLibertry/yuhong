@@ -29,6 +29,7 @@
     .logo{display:flex;align-items:center;gap:12px}
     .logo .mark{width:44px;height:44px;background:linear-gradient(135deg,var(--accent),#7dd3fc);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#001219}
     nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:500}
+    nav a:first-child{margin-left:0}
     nav a:hover{color:#fff}
     .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin-top:28px}
     .hero .left h1{font-size:34px;margin:0 0 12px}
@@ -50,6 +51,7 @@
       .features{grid-template-columns:1fr}
       nav{overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
       nav a{display:inline-block;margin-left:12px}
+      nav a.btn{margin-left:0}
       .logo{gap:8px}
     }
     .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.03),transparent);margin:18px 0;border-radius:2px}
@@ -69,11 +71,11 @@
         </div>
       </div>
       <nav>
+        <a href="download.html" class="btn" style="margin-left:0">立即下载</a>
         <a href="guide.html">使用说明</a>
         <a href="download.html">下载说明</a>
         <a href="faq.html">常见问题</a>
         <a href="contact.html">联系我们</a>
-        <a href="download.html" class="btn" style="margin-left:16px">立即下载</a>
       </nav>
     </header>
 
