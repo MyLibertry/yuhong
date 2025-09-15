@@ -3,14 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>关于我们 - 示例网站</title>
+  <title>关于我们 - 鸿裕助手</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { margin:0; font-family:Inter,system-ui; background:#0f172a; color:#e6eef6; line-height:1.6; }
+    :root{ --accent:#2dd4bf; --accent2:#f5d27a; --bg:#0b1220; --muted:#9fb3c8 }
+    body { margin:0; font-family:Inter,system-ui; 
+      background:
+        radial-gradient(1100px 560px at 20% -10%, rgba(45,212,191,0.432), transparent 62%),
+        radial-gradient(1000px 520px at 80% 0%, rgba(245,210,122,0.504), transparent 60%),
+        radial-gradient(900px 500px at 0% 100%, rgba(45,212,191,0.264), transparent 60%),
+        radial-gradient(900px 500px at 100% 100%, rgba(245,210,122,0.312), transparent 60%),
+        linear-gradient(180deg,#0a1b2b 0%, var(--bg) 100%);
+      background-attachment:fixed;
+      color:#e6eef6; line-height:1.6; }
     .container { max-width:800px; margin:0 auto; padding:28px; }
-    a { color:#0ea5a4; text-decoration:none; }
+    a { color:var(--accent); text-decoration:none; }
     header { margin-bottom:32px; }
-    footer { margin-top:48px; color:#94a3b8; font-size:14px; text-align:center; }
+    footer { margin-top:48px; color:var(--muted); font-size:14px; text-align:center; }
   </style>
 </head>
 <body>
