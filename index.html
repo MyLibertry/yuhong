@@ -41,9 +41,11 @@
     .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
     .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 30px rgba(2,6,23,0.6);}
     .small{font-size:13px;color:var(--muted)}
-    .flow-img{display:block;margin:0 auto;width:100%;max-width:300px;height:auto;border-radius:8px}
+    .flow-img{display:block;margin:0 auto;width:100%;max-width:320px;height:auto;border-radius:8px}
     .highlight{background:linear-gradient(180deg, rgba(14,165,164,0.14), rgba(255,255,255,0.03));border:1px solid rgba(14,165,164,0.35)}
     .badge{display:inline-block;padding:2px 8px;border-radius:999px;background:var(--accent);color:#002;font-weight:700;font-size:12px;margin-right:8px}
+    .badge.gold{background:linear-gradient(135deg,#f5d27a,#eab308);color:#3b2600}
+    .gold-title{color:#f5d27a;font-weight:800;letter-spacing:0.4px;text-shadow:0 0 8px rgba(245,210,122,0.18)}
     .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:34px 0}
     .feature{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:10px}
     .feature h3{margin:0 0 8px}
@@ -115,8 +117,8 @@
               <li>售后支持：如需调整或遇到问题，应用内发起售后。</li>
             </ol>
           </div>
-                    <div class="card highlight" style="margin-top:12px">
-            <div class="badge">重要</div><strong>服务流程说明</strong>
+          <div class="card highlight" style="margin-top:12px">
+            <div class="badge gold">提示</div><strong class="gold-title">软件功能说明</strong>
             <ol style="margin:8px 0 0 18px">
               <li> 鸿裕助手是一款竞彩下单APP，软件功能包含如下。</li>
               <li>《竞彩足球》《竞彩篮球》《大乐透》《七星彩》《排列三》《排列五》</li>
@@ -124,6 +126,10 @@
               <li> 对每场赛事从球队战术风格、球员状态、伤病情况等多维度深入解读分析，给出专业预测。</li>
               <li> 提供赛事赔率分析，包括欧亚指数对比、历史数据统计等，帮助用户全面了解市场动态。</li>
             </ol>
+          </div>
+          <div class="cta" style="margin:24px 0; justify-content:center">
+            <button class="btn" onclick="window.location.href='download.html'">立即下载</button>
+            <button class="btn ghost" onclick="window.location.href='guide.html'">使用说明</button>
           </div>
         </div>
         <aside>
@@ -133,10 +139,7 @@
         </aside>
       </section>
 
-     <div class="cta" style="margin:24px 0; justify-content:center">
-       <button class="btn" onclick="window.location.href='download.html'">立即下载</button>
-       <button class="btn ghost" onclick="window.location.href='guide.html'">使用说明</button>
-     </div>
+
 
       <section id="guide">
         <h2 style="margin-top:44px">应用说明与注意事项</h2>
