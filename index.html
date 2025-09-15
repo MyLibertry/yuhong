@@ -38,13 +38,20 @@
     .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
     .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 30px rgba(2,6,23,0.6);}
     .small{font-size:13px;color:var(--muted)}
+    .highlight{background:linear-gradient(180deg, rgba(14,165,164,0.14), rgba(255,255,255,0.03));border:1px solid rgba(14,165,164,0.35)}
+    .badge{display:inline-block;padding:2px 8px;border-radius:999px;background:var(--accent);color:#002;font-weight:700;font-size:12px;margin-right:8px}
     .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:34px 0}
     .feature{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:10px}
     .feature h3{margin:0 0 8px}
     .feature p{margin:0;color:var(--muted);font-size:14px}
     footer{margin:48px 0 20px;color:var(--muted);font-size:13px;text-align:center}
     @media (max-width:900px){.hero{grid-template-columns:1fr;} .features{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:600px){.features{grid-template-columns:1fr} nav a{display:none} .logo{gap:8px}}
+    @media (max-width:600px){
+      .features{grid-template-columns:1fr}
+      nav{overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
+      nav a{display:inline-block;margin-left:12px}
+      .logo{gap:8px}
+    }
     .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.03),transparent);margin:18px 0;border-radius:2px}
     form.input-grid{display:grid;gap:12px}
     input,textarea{background:var(--glass);border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:8px;color:#e6eef6;outline:none}
@@ -97,6 +104,19 @@
                 <button type="button" class="btn ghost" onclick="resetForm()">重置</button>
               </div>
             </form>
+          </div>
+          <div class="card highlight" style="margin-top:12px">
+            <div class="badge">重要</div><strong>服务流程说明</strong>
+            <ol style="margin:8px 0 0 18px">
+              <li>用户准备：下载安装、注册登录并完成基础设置。</li>
+              <li>选择服务：在应用内选择功能，确认参数与费用。</li>
+              <li>提交下单：系统校验信息并生成订单。</li>
+              <li>支付确认：通过官方渠道完成支付，进入执行队列。</li>
+              <li>任务执行：后台按规则调度执行，过程全程记录。</li>
+              <li>结果回传：完成后结果同步客户端并通知提醒。</li>
+              <li>复核结算：查看结果、下载凭证/报表，订单完结。</li>
+              <li>售后支持：如需调整或遇到问题，应用内发起售后。</li>
+            </ol>
           </div>
           <div class="card" style="margin-top:12px">
             <img src="liucheng.jpg" alt="示例图片" style="width:100%;height:auto;border-radius:8px" />
