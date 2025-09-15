@@ -34,13 +34,17 @@
     nav a:first-child{margin-left:0}
     nav a:hover{color:#fff}
     .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:start;margin-top:12px}
+    .hero .left{ text-align:center }
     .hero .left h1{font-size:34px;margin:0 0 12px}
     .hero .left p{color:var(--muted);margin:0 0 18px}
     .cta{display:flex;gap:12px}
+    .hero .left .cta{justify-content:center}
     .btn{padding:12px 18px;border-radius:10px;background:var(--accent);color:#002;font-weight:700;border:none;cursor:pointer}
     .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
     .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 30px rgba(2,6,23,0.6);}
     .small{font-size:13px;color:var(--muted)}
+    .card.center{ text-align:center }
+    .card.center ol{ list-style-position:inside; padding-left:0; }
     .highlight{background:linear-gradient(180deg, rgba(14,165,164,0.14), rgba(255,255,255,0.03));border:1px solid rgba(14,165,164,0.35)}
     .badge{display:inline-block;padding:2px 8px;border-radius:999px;background:var(--accent);color:#002;font-weight:700;font-size:12px;margin-right:8px}
     .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:34px 0}
@@ -96,9 +100,9 @@
           </div>
         </div>
         <aside>
-          <div class="card highlight" style="margin-top:12px">
+          <div class="card highlight center" style="margin-top:12px">
             <div class="badge">重要</div><strong>服务流程说明</strong>
-            <ol style="margin:8px 0 0 18px">
+            <ol style="margin:8px 0 0 0">
               <li>用户准备：下载安装、注册登录并完成基础设置。</li>
               <li>选择服务：在应用内选择功能，确认参数与费用。</li>
               <li>提交下单：系统校验信息并生成订单。</li>
