@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>裕鸿助手 · 联系我们</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--accent:#0ea5a4;--bg:#0f172a;--card:#0b1220;--muted:#94a3b8}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,var(--bg), #071029 80%);color:#e6eef6}
+    .container{max-width:900px;margin:0 auto;padding:28px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+    .btn{padding:12px 18px;border-radius:10px;background:var(--accent);color:#002;font-weight:700;border:none}
+    input,textarea{width:100%;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:#e6eef6}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header style="display:flex;align-items:center;gap:10px">
+      <img src="logo.png" alt="裕鸿助手" style="width:36px;height:36px;border-radius:8px"/>
+      <strong>裕鸿助手 · 联系我们</strong>
+      <a href="index.html" style="margin-left:auto;color:#bfeaf2">返回首页</a>
+    </header>
+
+    <h1>联系我们</h1>
+    <div class="card" style="margin-top:12px">
+      <form onsubmit="event.preventDefault();alert('演示：请接入后端或mailto');">
+        <div style="display:grid;gap:12px">
+          <input placeholder="姓名" required>
+          <input type="email" placeholder="邮箱" required>
+          <textarea placeholder="留言（可选）" style="min-height:120px"></textarea>
+          <button class="btn" type="submit">发送</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

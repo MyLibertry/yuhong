@@ -62,10 +62,11 @@
         </div>
       </div>
       <nav>
-        <a href="#guide">使用说明</a>
-        <a href="#download">下载说明</a>
-        <a href="#faq">常见问题</a>
-        <a href="#contact">联系我们</a>
+        <a href="guide.html">使用说明</a>
+        <a href="download.html">下载说明</a>
+        <a href="faq.html">常见问题</a>
+        <a href="contact.html">联系我们</a>
+        <a href="download.html" class="btn" style="margin-left:16px">立即下载</a>
       </nav>
     </header>
 
@@ -104,68 +105,19 @@
       </section>
 
       <section id="guide">
-        <h2 style="margin-top:44px">程序使用说明</h2>
+        <h2 style="margin-top:44px">应用说明与注意事项</h2>
         <div class="card" style="margin-top:12px">
           <ol style="margin:0 0 0 18px">
-            <li>从下方“下载说明”获取最新版安装包并保存到电脑。</li>
-            <li>双击安装包并按提示完成安装；如被拦截，选择“仍要运行”。</li>
-            <li>启动“裕鸿助手”，用手机号注册/登录，完成初始化设置。</li>
-            <li>常用操作：在首页选择功能 → 按步骤执行；问题可查看“常见问题”。</li>
+            <li>从顶部“立即下载”进入下载页获取最新安装包。</li>
+            <li>安装后用手机号注册/登录，按向导完成基础设置。</li>
+            <li>如被防护软件拦截，选择“仍要运行”或加入白名单。</li>
           </ol>
-          <p class="small" style="margin-top:12px">提示：首次使用建议先在设置里开启自动更新与日志上报。</p>
-        </div>
-      </section>
-
-      <section id="download" style="margin-top:36px">
-        <h2>下载说明</h2>
-        <div class="card" style="margin-top:12px">
-          <p class="small">请将下方链接替换为你的真实下载地址。</p>
-          <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a class="btn" href="#" id="downloadBtn">立即下载（Windows）</a>
-            <button class="btn ghost" type="button" onclick="scrollToSection('guide')">查看使用说明</button>
-          </div>
           <div class="divider"></div>
-          <div class="small">
-            <div><strong>系统要求：</strong> Windows 10/11 64位，联网环境。</div>
-            <div><strong>版本：</strong> v1.0.0（示例）。</div>
-            <div><strong>校验：</strong> SHA256：请替换为真实签名。</div>
-          </div>
-        </div>
-      </section>
-
-      <section id="faq" style="margin-top:36px">
-        <h2>常见问题</h2>
-        <div class="card" style="margin-top:12px">
-          <details>
-            <summary>安装被防护软件拦截怎么办？</summary>
-            <p class="small">请选择“仍要运行/信任此应用”，或将安装包加入白名单。</p>
-          </details>
-          <details>
-            <summary>启动后提示缺少运行库？</summary>
-            <p class="small">在“下载说明”中安装运行库或通过系统更新安装 .NET/VC 运行库后重试。</p>
-          </details>
-          <details>
-            <summary>如何联系客服？</summary>
-            <p class="small">前往页面底部“联系方式”提交表单或通过邮箱与我们联系。</p>
-          </details>
-        </div>
-      </section>
-
-      <section id="contact" style="margin-top:36px">
-        <h2>联系方式</h2>
-        <div class="card" style="margin-top:12px">
-          <p class="small">如果你需要扩展功能，请告诉我。</p>
-          <form onsubmit="handleSubmit(event)">
-            <div class="input-grid">
-              <input id="cname" placeholder="你的名字" />
-              <input id="cemail" placeholder="你的邮箱" />
-              <textarea id="cmsg" placeholder="你想要的功能 / 备注"></textarea>
-              <div style="display:flex;gap:8px">
-                <button class="btn" type="button" onclick="alert('演示：请接入后端或mailto')">发送请求</button>
-                <button class="btn ghost" type="button" onclick="window.location='#'">取消</button>
-              </div>
-            </div>
-          </form>
+          <ul style="margin:0 0 0 18px">
+            <li>仅从本站下载，谨防仿冒链接。</li>
+            <li>保持网络畅通以获得更新与云端能力。</li>
+            <li>更多帮助请前往“使用说明”“常见问题”。</li>
+          </ul>
         </div>
       </section>
     </main>
