@@ -7,7 +7,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --accent:#0ea5a4;
+      --accent:#2dd4bf; /* 图标青绿色 */
+      --accent2:#ff6b86; /* 图标珊瑚红 */
       --bg:#0f172a;
       --card:#0b1220;
       --muted:#94a3b8;
@@ -18,7 +19,10 @@
     body{
       margin:0;
       font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;
-      background: linear-gradient(180deg,var(--bg), #071029 80%);
+      background:
+        radial-gradient(800px 400px at 10% 0%, rgba(45,212,191,0.16), transparent 60%),
+        radial-gradient(800px 400px at 90% 10%, rgba(255,107,134,0.14), transparent 55%),
+        linear-gradient(180deg,#0f172a, #0b1220 80%);
       color:#e6eef6;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
@@ -124,11 +128,11 @@
           <div class="card highlight" style="margin-top:12px">
             <div class="badge gold">提示</div><strong class="gold-title">软件功能说明</strong>
             <ol style="margin:8px 0 0 18px">
-              <li> 鸿裕助手是一款竞彩下单APP，软件功能包含如下。</li>
-              <li>《竞彩足球》《竞彩篮球》《大乐透》《七星彩》《排列三》《排列五》</li>
-              <li> 专业赛事分析：邀请专业足球分析师团队。</li>
-              <li> 对每场赛事从球队战术风格、球员状态、伤病情况等多维度深入解读分析，给出专业预测。</li>
-              <li> 提供赛事赔率分析，包括欧亚指数对比、历史数据统计等，帮助用户全面了解市场动态。</li>
+              <li><span class="key k2">鸿裕助手</span> 是一款 <span class="key k3">竞彩下单APP</span>，<span class="key k3">软件功能</span> 包含如下。</li>
+              <li><span class="key k1">《竞彩足球》</span> <span class="key k2">《竞彩篮球》</span> <span class="key k3">《大乐透》</span> <span class="key k3">《七星彩》</span> <span class="key k3">《排列三》</span> <span class="key k3">《排列五》</span></li>
+              <li><span class="key k2">专业赛事分析</span>：邀请 <span class="key k3">专业足球分析师团队</span>。</li>
+              <li>对每场赛事从 <span class="key k3">球队战术风格</span>、<span class="key k3">球员状态</span>、<span class="key k3">伤病情况</span> 等多维度深入解读分析，给出 <span class="key k1">专业预测</span>。</li>
+              <li>提供 <span class="key k2">赛事赔率分析</span>，包括 <span class="key k3">欧亚指数对比</span>、<span class="key k3">历史数据统计</span> 等，帮助用户全面了解 <span class="key k2">市场动态</span>。</li>
             </ol>
           </div>
           <div class="cta" style="margin:24px 0; justify-content:center">
