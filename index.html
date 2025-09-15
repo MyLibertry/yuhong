@@ -33,7 +33,7 @@
     nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:500}
     nav a:first-child{margin-left:0}
     nav a:hover{color:#fff}
-    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin-top:28px}
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:start;margin-top:12px}
     .hero .left h1{font-size:34px;margin:0 0 12px}
     .hero .left p{color:var(--muted);margin:0 0 18px}
     .cta{display:flex;gap:12px}
@@ -96,19 +96,6 @@
           </div>
         </div>
         <aside>
-          <div class="card">
-            <h3 style="margin-top:0">快速信息</h3>
-            <p class="small">替换右侧的表单，可以用来收集访客信息或配置预约。</p>
-            <form id="contactForm" class="input-grid" onsubmit="handleSubmit(event)">
-              <input id="name" placeholder="姓名" required />
-              <input id="email" type="email" placeholder="邮箱" required />
-              <textarea id="message" placeholder="留言（可选）"></textarea>
-              <div style="display:flex;gap:8px">
-                <button class="btn" type="submit">发送</button>
-                <button type="button" class="btn ghost" onclick="resetForm()">重置</button>
-              </div>
-            </form>
-          </div>
           <div class="card highlight" style="margin-top:12px">
             <div class="badge">重要</div><strong>服务流程说明</strong>
             <ol style="margin:8px 0 0 18px">
