@@ -27,6 +27,8 @@
     .container{max-width:1100px;margin:0 auto;padding:28px}
     header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
     .logo{display:flex;align-items:center;gap:12px}
+    .logo{flex-shrink:0}
+    .logo .mark{flex-shrink:0}
     .logo .mark{width:44px;height:44px;background:linear-gradient(135deg,var(--accent),#7dd3fc);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#001219}
     nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:500}
     nav a:first-child{margin-left:0}
@@ -49,9 +51,9 @@
     @media (max-width:900px){.hero{grid-template-columns:1fr;} .features{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:600px){
       .features{grid-template-columns:1fr}
-      nav{overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
-      nav a{display:inline-block;margin-left:12px}
-      nav a.btn{margin-left:0}
+      nav{overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;font-size:14px}
+      nav a{display:inline-block;margin-left:8px}
+      nav a.btn{margin-left:0;padding:8px 12px;border-radius:8px}
       .logo{gap:8px}
     }
     .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.03),transparent);margin:18px 0;border-radius:2px}
@@ -67,7 +69,7 @@
         <div class="mark"><img src="logo.png" alt="裕鸿助手" style="width:100%;height:100%;object-fit:cover;border-radius:8px" /></div>
         <div>
           <div style="font-weight:700">裕鸿助手</div>
-          <div class="small">简单 · 直接 · 可部署</div>
+          <div class="small">简单 · 直接 · 方便</div>
         </div>
       </div>
       <nav>
