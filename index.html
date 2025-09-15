@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>示例网站 — 单页模板</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#0ea5a4;
+      --bg:#0f172a;
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;
+      background: linear-gradient(180deg,var(--bg), #071029 80%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .mark{width:44px;height:44px;background:linear-gradient(135deg,var(--accent),#7dd3fc);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#001219}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:500}
+    nav a:hover{color:#fff}
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin-top:28px}
+    .hero .left h1{font-size:34px;margin:0 0 12px}
+    .hero .left p{color:var(--muted);margin:0 0 18px}
+    .cta{display:flex;gap:12px}
+    .btn{padding:12px 18px;border-radius:10px;background:var(--accent);color:#002;font-weight:700;border:none;cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 30px rgba(2,6,23,0.6);}
+    .small{font-size:13px;color:var(--muted)}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:34px 0}
+    .feature{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:10px}
+    .feature h3{margin:0 0 8px}
+    .feature p{margin:0;color:var(--muted);font-size:14px}
+    footer{margin:48px 0 20px;color:var(--muted);font-size:13px;text-align:center}
+    @media (max-width:900px){.hero{grid-template-columns:1fr;} .features{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:600px){.features{grid-template-columns:1fr} nav a{display:none} .logo{gap:8px}}
+    .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.03),transparent);margin:18px 0;border-radius:2px}
+    form.input-grid{display:grid;gap:12px}
+    input,textarea{background:var(--glass);border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:8px;color:#e6eef6;outline:none}
+    textarea{min-height:100px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">X</div>
+        <div>
+          <div style="font-weight:700">示例站点</div>
+          <div class="small">简单 · 直接 · 可部署</div>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">首页</a>
+        <a href="about.html">关于我们</a>
+        <a href="#features">功能</a>
+        <a href="#contact">联系我们</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="left">
+          <h1>单页演示 — 立刻可用</h1>
+          <p>这是一个可直接使用的HTML单页网站模板。替换文字、图片与链接即可上线。</p>
+          <div class="cta">
+            <button class="btn" onclick="scrollToSection('contact')">联系我们</button>
+            <button class="btn ghost" onclick="downloadHTML()">下载 HTML</button>
+          </div>
+          <div class="divider"></div>
+          <div class="card small" style="margin-top:12px">
+            <div><strong>部署建议：</strong> 直接把此文件命名为 <code>index.html</code> 并上传到任意静态主机。</div>
+          </div>
+        </div>
+        <aside>
+          <div class="card">
+            <h3 style="margin-top:0">快速信息</h3>
+            <p class="small">替换右侧的表单，可以用来收集访客信息或配置预约。</p>
+            <form id="contactForm" class="input-grid" onsubmit="handleSubmit(event)">
+              <input id="name" placeholder="姓名" required />
+              <input id="email" type="email" placeholder="邮箱" required />
+              <textarea id="message" placeholder="留言（可选）"></textarea>
+              <div style="display:flex;gap:8px">
+                <button class="btn" type="submit">发送</button>
+                <button type="button" class="btn ghost" onclick="resetForm()">重置</button>
+              </div>
+            </form>
+          </div>
+          <div class="card" style="margin-top:12px">
+            <img src="74d5c0f19fef2b68cd68007fff7a787b.jpg" alt="示例图片" style="width:100%;height:auto;border-radius:8px" />
+          </div>
+        </aside>
+      </section>
+
+      <section id="features">
+        <h2 style="margin-top:44px">功能速览</h2>
+        <div class="features">
+          <div class="feature">
+            <h3>响应式布局</h3>
+            <p>自动适配桌面与移动设备。</p>
+          </div>
+          <div class="feature">
+            <h3>易于部署</h3>
+            <p>单文件 HTML，支持 GitHub Pages、Vercel 等。</p>
+          </div>
+          <div class="feature">
+            <h3>可扩展</h3>
+            <p>可以加入更多页面，或接入后端 API。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:36px">
+        <h2>联系方式</h2>
+        <div class="card" style="margin-top:12px">
+          <p class="small">如果你需要扩展功能，请告诉我。</p>
+          <form onsubmit="handleSubmit(event)">
+            <div class="input-grid">
+              <input id="cname" placeholder="你的名字" />
+              <input id="cemail" placeholder="你的邮箱" />
+              <textarea id="cmsg" placeholder="你想要的功能 / 备注"></textarea>
+              <div style="display:flex;gap:8px">
+                <button class="btn" type="button" onclick="alert('演示：请接入后端或mailto')">发送请求</button>
+                <button class="btn ghost" type="button" onclick="window.location='#'">取消</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> 示例站点 · 制作 by 你
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function scrollToSection(id){const el=document.getElementById(id);if(el) el.scrollIntoView({behavior:'smooth'});}
+    function resetForm(){document.getElementById('contactForm').reset();}
+    function handleSubmit(e){e.preventDefault();alert('表单提交成功（演示）。');e.target.reset?.();}
+    function downloadHTML(){const doctype='<!doctype html>\n';const html=doctype+document.documentElement.outerHTML;const blob=new Blob([html],{type:'text/html'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='index.html';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);}
+  </script>
+</body>
+</html>
