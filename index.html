@@ -7,12 +7,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --accent:#2dd4bf; /* 图标青绿 */
-      --accent2:#ff6b86; /* 图标珊瑚红 */
-      --gold:#f5d27a; /* 点缀金色 */
-      --bg:#0f172a;
+      --accent:#2dd4bf; /* 青绿 */
+      --accent2:#f5d27a; /* 金色 */
+      --bg:#0b1220; /* 深色基底 */
       --card:#0b1220;
-      --muted:#94a3b8;
+      --muted:#9fb3c8;
       --glass: rgba(255,255,255,0.03);
     }
     *{box-sizing:border-box}
@@ -21,12 +20,11 @@
       margin:0;
       font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;
       background:
-        radial-gradient(1100px 620px at 10% -10%, rgba(239,68,68,0.28), transparent 60%),
-        radial-gradient(900px 560px at 90% 0%, rgba(245,210,122,0.20), transparent 60%),
-        radial-gradient(1000px 680px at 50% 110%, rgba(45,212,191,0.18), transparent 60%),
-        linear-gradient(180deg,#f78aa4 0%, #ffdca3 45%, #7edfd2 100%);
+        radial-gradient(900px 480px at 15% -10%, rgba(245,210,122,0.12), transparent 60%),
+        radial-gradient(900px 520px at 85% 0%, rgba(45,212,191,0.10), transparent 60%),
+        linear-gradient(180deg,#0a1b2b 0%, var(--bg) 100%);
       background-attachment: fixed;
-      color:#0b1020;
+      color:#e6eef6;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
       line-height:1.5;
@@ -49,7 +47,7 @@
     .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 30px rgba(2,6,23,0.6);color:#e6eef6}
     .small{font-size:13px;color:var(--muted)}
     .flow-img{display:block;margin:0 auto;width:100%;max-width:360px;height:auto;border-radius:8px}
-    .highlight{background:linear-gradient(180deg, rgba(14,165,164,0.14), rgba(255,255,255,0.03));border:1px solid rgba(14,165,164,0.35)}
+    .highlight{background:linear-gradient(180deg, rgba(14,165,164,0.10), rgba(255,255,255,0.02));border:1px solid rgba(14,165,164,0.25)}
     .badge{display:inline-block;padding:2px 8px;border-radius:999px;background:var(--accent);color:#002;font-weight:700;font-size:12px;margin-right:8px}
     .badge.gold{background:linear-gradient(135deg,#f5d27a,#eab308);color:#3b2600}
     .gold-title{color:#f5d27a;font-weight:800;letter-spacing:0.4px;text-shadow:0 0 8px rgba(245,210,122,0.18)}
