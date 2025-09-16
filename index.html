@@ -65,9 +65,10 @@
     @media (max-width:900px){.hero{grid-template-columns:1fr;} .features{grid-template-columns:repeat(2,1fr)} .flow-img{max-width:none}}
     @media (max-width:600px){
       .features{grid-template-columns:1fr}
-      nav{overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;font-size:14px}
-      nav a{display:inline-block;margin-left:8px}
-      nav a.btn{margin-left:0;padding:8px 12px;border-radius:8px}
+      header{flex-direction:column;align-items:flex-start;gap:6px}
+      nav{margin-top:4px;overflow:visible;white-space:normal;-webkit-overflow-scrolling:auto;font-size:14px}
+      nav a{display:inline-block;margin:6px 8px 0 0}
+      nav a.btn{margin:6px 8px 0 0;padding:8px 12px;border-radius:8px}
       .logo{gap:8px}
     }
     .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.03),transparent);margin:18px 0;border-radius:2px}
